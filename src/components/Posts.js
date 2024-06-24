@@ -1,9 +1,12 @@
 import List from "./List"
+import { usePost } from "../context/PostContext"
 
-function Posts({posts}) {
+function Posts() {
+    const { posts } = usePost();
+
     return (
         <section>
-            <List posts={posts}/>
+            <List posts={posts} />
         </section>
     )
 }

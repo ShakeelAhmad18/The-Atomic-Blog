@@ -1,13 +1,16 @@
+
 import Results from "./Results"
 import SearchPosts from "./SearchPosts"
+import { usePost } from "../context/PostContext"
 
-function Header({posts,searchQuery,setSearchQuery,onClearPost}) {
+function Header() {
+    const { onClearPost } = usePost();
     return (
         <header>
             <h1><span>📊</span>The Atomic Blog</h1>
             <div>
-                <Results posts={posts}/>
-                <SearchPosts searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+                <Results />
+                <SearchPosts />
                 <button onClick={onClearPost}>Clear Post</button>
             </div>
         </header>

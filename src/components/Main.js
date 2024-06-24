@@ -1,11 +1,11 @@
 import FormAddPosts from "./FormAddPosts"
 import Posts from "./Posts"
 
-function Main({posts,onAddPost}) {
+function Main() {
     return (
         <main>
-          <FormAddPosts onAddPost={onAddPost}/>
-          <Posts posts={posts}/>  
+          <FormAddPosts/>
+          <Posts/>  
         </main>
     )
 }
